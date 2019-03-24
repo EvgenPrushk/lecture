@@ -73,45 +73,60 @@ function fact(n) {
 let fact = function(n){
     if (n === 0) return 1;
     return n * arguments.callee.caller(n - 1);
-}
+};
+
+
 function scoperAndClosure() {
+console.log('\n-----Scope&Closure-----');
 
 
 function inner() {
     function foo(a) {
         let b = 2;
+
         function bar() {
             let c = 3;
+
             console.log(a, b, c);
         }
+
         bar();
     }
+
     foo(1);
     }
+
     console.log('[inner scope]');
     inner();
+
     function outer() {
         let a = 100;
         let b = 200;
+
         function bar() {
             let c = 3;
-            console.log(a, b, c);
-            
+
+            console.log(a, b, c);        
             
         }
+
         function foo(a) {
          let  b = 2;
+
          bar();   
         }
+
         foo(7);
     }
 
 console.log('[outer scope]');
 outer();
+
 // приватные переменные через замыкания
 function counterInit() {
     let count = 0;
-    return 
+
+    return {
         add: function(val) {
             count += val;
             return count;
@@ -543,12 +558,44 @@ function promises() {
     Promise.all([
         Promise.resolve('First'),
         new Promise((res, rej) => res('Second')),
-        new Promise((res,rej) => setTimeout(() => res('Thid', 0)))
+        new Promise((res,rej) => setTimeout(() => res('Third', 0)))
+        
     ])
     .then(result => {
+        result.forEach(result => console.log('from All:', result));
+    
+    })
+    .catch((err) => console.log('SOMETHING went wrong', err)    );
+    Promise.race([
+        new Promise((res, rej) => setTimeout(() => res('Third'), 0)),
+        Promise.resolve('First'),
+
+    ])
+    .then(result => {
+        console.log('from Race:', result);
         
     })
-    
+
+    //Promice.resolve()
+    //Promice.reject()
+    //Promice.all()
+    //Promice.race()
+}
+function proxyES6() {
+    let obj = {
+a: 1
+    };
+let a = new Proxy(obj, {
+    get(target, key) {
+        console.log(target, key);
+        return target.hasOwnProperty(key) ?
+        target[key] : 9;
+
+        
+    }
+});
+console.log(a.a, a.b);
+
 }
 
 
