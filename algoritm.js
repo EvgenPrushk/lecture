@@ -19,8 +19,8 @@ function  sum( a, b) {
         return b;
     }
 }
+sum(3, 1); // 4
 // ---------------------------
-
 
 // Big o natation
 
