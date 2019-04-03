@@ -116,7 +116,7 @@ function merge(left, right) {
     while ( indexLeft < left.length && 
         indexRight < right.length) {
         if (left[indexLeft] < right[indexRight]) {
-            result.push(left[indexLeft]);
+            result.push(left[indmeexLeft]);
             indexLeft++;
         } else {
             result.push(right[indexRight]);
@@ -126,7 +126,66 @@ function merge(left, right) {
     return result.concat(left.slice(indexLeft)).concat(right.slice(indexRight));
 }
 
+//---------------Quick Sort--------
 
+function quckSort(array) {
+    if (array.length <= 1) {
+        return array;
+    }
+    // поворотная точка 
+    var pivot = 0;
+    arrayLeft = [];
+    arrayRight = [];
 
+    for (var i = 1; i < array.length; i++){
+        array[i] < pivot ? left.push(array[i]) : right.push(array[i]);
+    }
 
+    return quckSort(left).concat(pivot, quckSort(right));
+};
+//----Array Prototype Sort----
+
+String.fromCharCode(...(Array(65535).fill('').map((e, i) => i)));
+a.charCodeAt(); // 1072
+
+var months = ['March', 'Jan', 'Feb', 'Dec'];
+months.sort();
+console.log(months);
+//expected output: months['Dec','Feb', 'Jan', 'March']
+
+var array1 = [1, 30, 4, 21, 1000];
+array1.sort();
+console.log(array1);
+//expected output: array1[1, 1000, 21, 30, 4]
+
+let numbers = [4, 2, 5, 1, 3];
+numbers.sort((a, b) => a - b);
+// numbers[1, 2, 3, 4, 5]
+
+var items = [
+    {name: 'Edward', value: 21},
+    {name: 'Sharpe', value: 37},
+    {name: 'And', value: 44},
+    {name: 'The', value: -12},
+    {name: 'Magnetic', value: 13},
+    {name: 'Zeros', value: 37}
+];
+
+//sort by value
+items.sort(function (a, b) {
+    return a.value - b.value;
+});
+
+//sort by name
+items. sort(function (a,b) {
+    //ignore upper and lowercase
+    var nameA = a.name.toUpperCase();
+    var nameB = b.name.toUpperCase();
+    if (name <= nameB) {
+        return -1;
+    }
+    if (nameA > nameB) {
+        return 1;
+    }
+});
 //------------------------------
