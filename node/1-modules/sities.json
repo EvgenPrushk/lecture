@@ -1,0 +1,18 @@
+[
+    {
+        "name" : "Minsk",
+        "isCapital": true
+    },
+
+    {
+        "name" : "Brest",
+        "isCapital": false
+    },
+    
+    {
+        "name" : "Grodno",
+        "isCapital": false
+    }
+
+
+]
