@@ -1,0 +1,171 @@
+/* body{
+    margin: 0;
+    height: 100vh;
+}
+.main p{
+    margin: 0;
+}
+
+.header, .footer, .main, .menu-primary, .menu-secondary{
+    font-size: 1.5rem;
+    overflow: hidden;
+}
+
+.header, .footer {
+    background: #666;
+    height: 50px;
+    color: white;
+}
+
+.container{
+    height: calc(100% - 100px);
+    background: #999;
+    
+}
+
+.main {
+    font-size: 2rem;
+   background: #999;
+   flex: 1 1 auto;
+   order: 2;
+}
+
+.menu-primary{
+    background: #ccc;
+    width: 25%;
+    order: 1;
+}
+section{
+     display: flex;
+}
+.menu-secondary{
+    background: #ddd;
+    width: 25%;
+    order: 3;
+}
+
+/*flex*/
+/* .container{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+@media only screen and (max-width: 800px){
+    .menu-primary{
+        flex: 0 1 25%;
+        height: 75%;
+     }
+
+     .main{
+        height: 75%;
+    }
+    
+    .menu-secondary{
+        
+        flex: 0 1 100%;
+       height: 25%;
+    }
+    
+    
+}
+
+@media only screen and (max-width: 480px){
+    .menu-primary{
+        flex: 0 1 100%;
+        height: 50%;
+     }
+
+     .main{
+        height: 50%;
+    }
+    
+    .menu-secondary{
+        
+        flex:0 1 100%;
+       height: 25%;
+    }
+    
+    
+} */ 
+body{
+    margin: 0;
+    height: 100vh;
+}
+.main p{
+    margin: 0;
+}
+
+.header, .footer, .main, .menu-primary, .menu-secondary{
+    font-size: 1.5rem;
+    overflow: hidden;
+}
+
+.header, .footer {
+    background: #666;
+    height: 50px;
+    color: white;
+}
+
+.container{
+    height: calc(100% - 100px);
+    background: #999;
+    
+}
+
+.main {
+    font-size: 2rem;
+   background: #999;
+  grid-area: m;
+
+}
+
+.menu-primary{
+    background: #ccc;
+    grid-area: p;
+}
+
+.menu-secondary{
+    background: #ddd;
+    grid-area: s;
+
+}
+
+/*Grid*/
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-areas: "p m m s";
+    grid-gap: 1px;
+}
+
+@media only screen and (max-width: 800px){
+    .container{
+        grid-template-areas: 
+        "p m m m"
+        "p m m m"
+        "p m m m"
+        "s s s s"
+
+     }
+    
+    
+}
+@media only screen and (max-width: 480px){
+    .container{
+        grid-template-areas: 
+        "p p p p"
+        "m m m m"
+        "m m m m"
+        "s s s s"
+
+     }
+    
+    
+}
+section {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+}
