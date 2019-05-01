@@ -3,7 +3,7 @@ const path = require('path');
 modele.export = {
     entry: path.join(__dirname, 'app.js'),
     output: {
-        filename: '/app.bungle.js'
+        filename: './app.bundle.js'
     },
     module: {
        rules: [
