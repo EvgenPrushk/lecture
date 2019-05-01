@@ -6,9 +6,10 @@ modele.export = {
         filename: './app.bundle.js'
     },
     module: {
-       rules: [
-           {text: /\.txt$/, loader: 'text-loader' },
-           {text: /\.txt$/, loader: 'text-loader' }
+       rules: [ 
+           
+           {text: /\.txt$/, loader: 'text-loader'},
+           {enforce: 'pre', text: /\.js$/, loader: 'eslint-loader'},
        ] 
     }
 

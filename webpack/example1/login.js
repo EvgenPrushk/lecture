@@ -1,4 +1,4 @@
 export function login(){
-    console.log('logged in');
+    window.console.log('logged in');
     
 }

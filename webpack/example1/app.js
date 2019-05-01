@@ -3,4 +3,4 @@ import greetingText from './greeting.txt';
 
 login();
 
-console.log(greetingText);
+window.console.log(greetingText);
