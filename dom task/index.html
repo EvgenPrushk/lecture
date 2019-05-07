@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>pallete</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <p><i class="fas fa-bars"></i>CodeJam - Pallete</p>
+        </div>
+        <main>
+            <div class="left_panel">
+                <div class="palette tools">
+                    <ul>
+                        <li class="bucket controls"><i class="fas fa-fill-drip"></i>Paint bucket</li>
+                        <li class="eye-dropper controls"><i class="fas fa-eye-dropper"></i>Choose color</li>
+                        <hr />
+                        <li class="move controls"><i class="fas fa-arrows-alt"></i>Move</li>
+                        <li class="transform controls"><i class="fas fa-exchange-alt"></i>Transform</li>
+                        </li>
+                    </ul>
+                </div>
+                <div class="palette colors">
+                    <ul>
+                        <li><i class="fas fa-cirle currentColor"></i>Current color</li>
+                        <li class="prev-option"><i class="fas fa-cirle prev-color"></i>Prev color</li>
+                        <li class="red-option"><i class="fas fa-cirle red"></i>red</li>
+                        <li class="blue-option"><i class="fas fa-cirle blue"></i>blue</li>
+                        <li class="custom-option"><input type="color" id="color"> <label for="color">Custom
+                                color</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="canvas">
+                <div class="element round" id="element1" draggable="true"></div>
+                <div class="element" id="element2" draggable="true"></div>
+                <div class="element" id="element3" draggable="true"></div>
+                <div class="element" id="element4" draggable="true"></div>
+                <div class="element" id="element5" draggable="true"></div>
+                <div class="element" id="element6" draggable="true"></div>
+                <div class="element" id="element7" draggable="true"></div>
+                <div class="element" id="element8" draggable="true"></div>
+                <div class="element" id="element9" draggable="true"></div>
+            </div>
+        </main>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
