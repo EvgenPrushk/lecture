@@ -256,32 +256,102 @@
 // army1.replenish().showArmy('stormtroopers');
 // army2.replenish().showArmy('separatists');
 
+// const button = document.querySelector('button');
+// const endText = document.querySelector('#galaxy');
+
+// const addRandomClones = (...args) => {
+//   return Math.floor(Math.random() * (args[1] - args[0]) + args[0]);
+// };
+
+// var soldiersType = "aliens";
+
+// function Army(name) {
+//   this.name = name || "neutrals";
+//   this.stormtroopers = 1000;
+//   this.replenish = function() {
+//     this.fighters += addRandomClones(100, 200);
+//     return this;
+//   };
+//   this.refresh = function () {
+//       this.fighters = 1000;
+//   }
+// };
+
+// const army1 = new Army("Imperial");
+// const army2 = new Army("Rebels");
+
+// army1.replenish().showArmy("stormtroopers");
+// army2.replenish().showArmy("separatists");
+
+// function logFight(func) {
+//     return function () {
+//         console.log(`${army1.name} ${army1.fighters} / ${army2.name} ${army2.fighters}`);
+//         return func();
+//     }
+// }
+
+// function fight() {
+//     if(army1.fighters - army2.fighters > 200) {
+//         return endText.innerHTML = `${army1.name} rulese the galaxy`;
+//     } else if (army2.fighters - army1.fighters > 200){ 
+//         return endText.innerHTML = `${army2.name} rulese the galaxy`;
+//     } else {
+//         if(army1.fighters > army2.fighters) {
+//             army2.fighters -= 10;
+//         } else {army1.fighters -= 10; }
+
+//         if (army1.fighters > 5000 || army2.fighters > 5000 ) {
+//             return endText.innerHTML = 'Our galaxy is mired in war'
+//         } 
+//     army1.replenish();
+//     army2.replenish();
+//     return fight();
+//     }
+// }
+
+// fight = logFight(fight);
+
+// button.addEventListener('click', function () {
+//     army1.refresh();
+//     army2.refresh();
+//     fight();
+// });
+
+
+
 const button = document.querySelector('button');
 const endText = document.querySelector('#galaxy');
 
 const addRandomClones = (...args) => {
-  return Math.floor(Math.random() * (args[1] - args[0]) + args[0]);
+    return Math.floor(Math.random() * (args[1] - args[0]) + args[0]);
 };
 
 var soldiersType = "aliens";
 
-function Army(name) {
-  this.name = name || "neutrals";
-  this.stormtroopers = 1000;
-  this.replenish = function() {
-    this.fighters += addRandomClones(100, 200);
-    return this;
-  };
-  this.refresh = function () {
-      this.fighters = 1000;
-  }
+class Army {
+    constructor(name) {
+        this.name = name || "neutrals";
+        this.fighters = 1000;
+        
+        
+    }
+
+    replenish() {
+        this.fighters += addRandomClones(100, 200);
+        return this;
+    }
+
+    refresh() {
+        this.fighters = 1000;
+    }
+
 };
+
 
 const army1 = new Army("Imperial");
 const army2 = new Army("Rebels");
 
-army1.replenish().showArmy("stormtroopers");
-army2.replenish().showArmy("separatists");
+
 
 function logFight(func) {
     return function () {
@@ -291,21 +361,21 @@ function logFight(func) {
 }
 
 function fight() {
-    if(army1.fighters - army2.fighters > 200) {
+    if (army1.fighters - army2.fighters > 200) {
         return endText.innerHTML = `${army1.name} rulese the galaxy`;
-    } else if (army2.fighters - army1.fighters > 200){ 
+    } else if (army2.fighters - army1.fighters > 200) {
         return endText.innerHTML = `${army2.name} rulese the galaxy`;
     } else {
-        if(army1.fighters > army2.fighters) {
+        if (army1.fighters > army2.fighters) {
             army2.fighters -= 10;
-        } else {army1.fighters -= 10; }
+        } else { army1.fighters -= 10; }
 
-        if (army1.fighters > 5000 || army2.fighters > 5000 ) {
+        if (army1.fighters > 5000 || army2.fighters > 5000) {
             return endText.innerHTML = 'Our galaxy is mired in war'
-        } 
-    army1.replenish();
-    army2.replenish();
-    return fight();
+        }
+        army1.replenish();
+        army2.replenish();
+        return fight();
     }
 }
 
