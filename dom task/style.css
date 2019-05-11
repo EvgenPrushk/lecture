@@ -1,0 +1,298 @@
+.wrapper {
+    position: relative;
+  
+    width: 1440px;
+    height: 900px;
+  
+    background: #ffffff;
+  }
+  
+  li {
+    list-style-type: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  .sheets-bottom-list1 {
+    position: absolute;
+    top: 134px;
+    left: 46px;
+  
+    width: 228px;
+    height: 246px;
+  }
+  
+  
+  .fa-fill-drip {
+    margin-right: 70px;
+  }
+  .fa-eye-dropper {
+    margin-right: 70px;
+  }
+  .fa-arrows-alt {
+    margin-right: 115px;
+  }
+  .fa-exchange-alt {
+    margin-right: 85px;
+  }
+  
+  .sheets-bottom-list2 {
+    position: absolute;
+    top: 465px;
+    left: 46px;
+  
+    width: 228px;
+    height: 246px;
+    margin-right: 90px;
+  
+    text-align: left;
+  }
+  
+  .sheet-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  
+    background: #ffffff;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24),
+    0 0 4px rgba(0, 0, 0, 0.12);
+  }
+  
+  .list-item1 {
+    position: absolute;
+    top: 0;
+    left: 18px;
+  
+    width: 196px;
+    height: 48px;
+  
+    text-align: right;
+  }
+  
+  .list-item2 {
+    position: absolute;
+    top: 56px;
+    left: 18px;
+  
+    width: 196px;
+    height: 48px;
+  
+    text-align: right;
+  }
+  
+  .list-item3 {
+    position: absolute;
+    top: 120px;
+    left: 18px;
+  
+    width: 196px;
+    height: 48px;
+  
+    text-align: right;
+  }
+  
+  .line {
+    position: absolute;
+    top: 111px;
+    right: 0;
+    left: 0;
+  
+    height: 1px;
+  
+    background: rgba(0, 0, 0, 0.12);
+  }
+  
+  .list-item4 {
+    position: absolute;
+    top: 178px;
+    left: 18px;
+  
+    width: 196px;
+    height: 48px;
+  
+    text-align: right;
+  }
+  
+  .ellipse-current {
+    position: absolute;
+    top: 14px;
+    left: 18px;
+  
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+  
+    background: #c4c4c4;
+    border: 1px solid #000000;
+    border-radius: 50%;
+  }
+  
+  .ellipse-green {
+    position: absolute;
+    top: 12px;
+    left: 18px;
+  
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+  
+    background: #41f795;
+    border: 1px solid #000000;
+    border-radius: 50%;
+  }
+  
+  .ellipse-red {
+    position: absolute;
+    top: 12px;
+    left: 18px;
+    z-index: 2;
+  
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+  
+    background: #f74141;
+    border: 1px solid #000000;
+    border-radius: 50%;
+  }
+  
+  
+  .ellipse-blue {
+    position: absolute;
+    top: 12px;
+    left: 18px;
+    z-index: 2;
+  
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+  
+    background: #41b6f7;
+    border: 1px solid #000000;
+    border-radius: 50%;
+  }
+  
+  .union {
+    position: absolute;
+    top: 56px;
+    left: 405px;
+  
+    width: 725px;
+    height: 731px;
+  
+    background: rgba(0, 0, 0, 0.2);
+  }
+  
+  .image-lists {
+    position: absolute;
+    top: 127px;
+    left: 674px;
+  
+    width: 725px;
+    height: 731px;
+  }
+  #element1 {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: rgba(0, 0, 0, 0.26);
+      left: 35px;
+      top: 35px;
+  
+  }
+  
+  
+  #element2 {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: rgba(0, 0, 0, 0.26);
+  
+      left: 270px;
+      top: 35px;
+  }
+  
+  #element3 {
+      position:absolute;
+      width: 200px;
+      height: 200px;
+      background: rgba(0, 0, 0, 0.26);
+      left: 505px;
+      top: 35px;
+  }
+  
+  
+  #element4 {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: rgba(0, 0, 0, 0.26);
+      left: 35px;
+      top: 270px;
+  
+  }
+  
+  
+  #element5 {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: rgba(0, 0, 0, 0.26);
+  
+      left: 270px;
+      top: 270px;
+  }
+  
+  #element6 {
+      position:absolute;
+      width: 200px;
+      height: 200px;
+      background: rgba(0, 0, 0, 0.26);
+      left: 505px;
+      top: 270px;
+  }
+  
+  #element7 {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      -moz-border-radius:100px;
+      -webkit-border-radius: 100px;
+      border-radius: 100px;
+      background: rgba(0, 0, 0, 0.26);
+      left: 35px;
+      top: 505px;
+  
+  }
+  
+  
+  #element8 {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: rgba(0, 0, 0, 0.26);
+  
+      left: 270px;
+      top: 505px;
+  }
+  
+  #element9 {
+      position:absolute;
+      width: 200px;
+      height: 200px;
+      background: rgba(0, 0, 0, 0.26);
+      left: 505px;
+      top: 505px;
+  }
+  
+  
+  
+  .draggable{
+      cursor: pointer;
+  }
+  
+  
+  
