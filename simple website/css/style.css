@@ -1,0 +1,70 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.main {
+    color: #fff;
+    display: flex;
+    height: 100vh;
+    min-height: 600px;
+    background: url(../img/Logo.png) no-repeat center;
+    background-size: cover;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+.main-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    z-index: 0;
+    background-image: -moz-linear-gradient(150deg, rgb(136, 211, 206) 0%, rgb(110, 69, 226) 100%);
+    background-image: -webkit-linear-gradient(150deg, rgb(136, 211, 206) 0%, rgb(110, 69, 226) 100%);
+    background-image: -ms-linear-gradient(150deg, rgb(136, 211, 206) 0%, rgb(110, 69, 226) 100%);
+
+}
+
+.header {
+  display: flex;
+  height: 10vh;
+  justify-content: space-between;
+    
+    widows: 90%;
+    position: relative;
+    z-index: 2;
+  
+}
+.menu {
+width: 70%;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+.menu-link{
+    
+    color: #fff;
+   text-decoration: none;
+
+}
+
+.get-started-btn {
+    margin-left: 60px;
+    border:  1px solid #fff;
+    padding: 10px 20px;
+    border-radius: 100px;
+    text-transform: uppercase;
+}
