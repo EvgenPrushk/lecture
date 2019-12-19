@@ -6,7 +6,7 @@
 
 body {
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Maven Pro', sans-serif;
 }
 
 .main {
@@ -67,4 +67,54 @@ width: 70%;
     padding: 10px 20px;
     border-radius: 100px;
     text-transform: uppercase;
+}
+.main-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+.main-text * {
+    border: 1px solid red;
+}
+.main-text  {
+    border: 1px solid blue;
+}
+.main-text span{
+    display: inline-block;
+}
+.main-text h1 {
+    margin: 0.5rem;
+    font-size: 88px;
+}
+.main-text span::after {
+    content: '';
+    width: 20px;
+    height: 1px;
+    display: inline-block;
+    background-color: #fff;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.main-text span::before {
+    content: '';
+    width: 20px;
+    height: 1px;
+    display: inline-block;
+    background-color: #fff;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.main-arrow{
+    position: relative;
+    z-index: 2;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
