@@ -1,61 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./libs/bootstrap.min.css">
-    <link rel="stylesheet" href="./style/style.css">
-    <title>Glo</title>
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./libs/bootstrap.min.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Glo</title>
 </head>
+
 <body>
     <!-- heading-->
     <main class="countainer ру-5 text-center ">
-    <div id="block-choice">
-        <img src="./img/logo.png" alt="logo" class="d-bock mx-auto mb-4" width="72" height="72">
-        <h1>Shaverma</h1>
-        <p class="lead text-muted">Добро пожаловать на нашу фриланс биржу</p>
-        <p class="lead text-muted">Если вы заказчик то вы можете заказать проект</p>
-        <p class="lead text-muted">Если вы фрилансер то вы всегда найдете у нас проект по силам</p>
-        <p class="mt-5">
-            <a href="#" class="btn btn-primary my-3 px-4 ру-2" id="customer">Заказчик</a>
-            <a href="#" class="btn btn-secondaey my-3 px-4 ру-2" id="freelancer">Фрилансер</a>
-        </p>        
-    </div>
-    <!-- menu customer-->
-
-    <div id="block-customer">
-        <img src="./img/logo.png" alt="log" class="d-block mx-auto mb-4" width="72" height="72">
-        <h1>Shaverma</h1>
-        <div class="col">
-            <h4 class="mb-3">Оставте заявку</h4>
-            <form  id="form-customer">
-
-                <div class="mb-3">
-                    <label for="title">Заголовок (краткое описание задачи)</label>
-                    <input type="text" class="form-control" id="title" name="title" required placeholder="Заголовок">
-                </div>
-                <div class="row">
-                    <div class="col-md-4 mb-3">
-                        <label for="firstName">Your name</label>
-                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Ваше имя" required>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="you@mail.com" required>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="phone">telephone number</label>
-                        <input type="text" class="form-control" id="phone" name="phone" placeholder="+375(29)1234567" required>
-                    </div>
-                    
-                </div>
-
-            </form>
+        <div id="block-choice">
+            <img src="./img/logo.png" alt="logo" class="d-bock mx-auto mb-4" width="72" height="72" />
+            <h1>Shaverma</h1>
+            <p class="lead text-muted">Добро пожаловать на нашу фриланс биржу</p>
+            <p class="lead text-muted">
+                Если вы заказчик то вы можете заказать проект
+            </p>
+            <p class="lead text-muted">
+                Если вы фрилансер то вы всегда найдете у нас проект по силам
+            </p>
+            <p class="mt-5">
+                <a href="#" class="btn btn-primary my-3 px-4 ру-2" id="customer">Заказчик</a>
+                <a href="#" class="btn btn-secondaey my-3 px-4 ру-2" id="freelancer">Фрилансер</a>
+            </p>
         </div>
-    </div>
+        <!-- menu customer-->
+
+        <div id="block-customer">
+            <img src="./img/logo.png" alt="log" class="d-block mx-auto mb-4" width="72" height="72" />
+            <h1>Shaverma</h1>
+            <div class="col">
+                <h4 class="mb-3">Оставте заявку</h4>
+                <form id="form-customer">
+                    <div class="mb-3">
+                        <label for="title">Заголовок (краткое описание задачи)</label>
+                        <input type="text" class="form-control" id="title" name="title" required
+                            placeholder="Заголовок">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label for="firstName">Your name</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName"
+                                placeholder="Ваше имя" required>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="you@mail.com"
+                                required>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="phone">telephone number</label>
+                            <input type="text" class="form-control" id="phone" name="phone"
+                                placeholder="+375(29)1234567" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="description">Description</label>
+                        <textarea name="description" id="description" type="text" class="form-control"
+                            placeholder="Подробное описание" rows="4" required></textarea>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+
+                            <div class="mb-3">
+                                <label for="amount">Amount</label>
+                                <input type="number" class="form-control" id="amount" name="amount" required>
+
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <label class="currency">
+                                    <input type="currency-radio" type="radio" name="currency" id="bucks" value="bucks">
+                                    <span class="img__radio img__radio_bucks"></span>
+                                </label>
+                                <label class="currency">
+                                    <input type="currency-radio" type="radio" name="currency" id="shawarma"
+                                        value="shawarma">
+                                    <span class="img__radio img__radio_shawarma"></span>
+                                    <label class="currency">
+                                        <input type="currency-radio" type="radio" name="currency" id="doshirak"
+                                            value="doshirak">
+                                        <span class="img__radio img__radio_doshirak"></span>
+                                    </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="mb-3">
+                                <label for="deadline">Deadline</label>
+                                <input type="data" class="form-control" id="deadline" name="deadline" max="2021-12-31"
+                                    required>
+                            </div>
+                            <button class="btn btn-primary btn-lg btn-block" type="submit"></button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <!--block-freelancer-->
+
+        <div id="block-freelancer">
+            <img class="d-block mx-auto mb-4" src="/img/logo.png" alt="logo" width="72" height="72">
+            <h1>Shaverma</h1>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover table-sm">
+                    <thead class="thead-dark" id="headTable">
+                        <tr>
+                            <th>#</th>
+                            <th class="head-sort" id="taskSort">The main task</th>
+                            <th class="head-sort" id="costSort">Cost</th>
+                            <th class="head-sort" id="currencySort">Currency</th>
+                            <th class="head-sort" id="deadlinekSort">Deadline</th>
+                        </tr>
+                    </thead>
+                    <tfoot id="footTable">                        
+                    </tfoot>
+                    <tbody id="orders"></tbody>
+                </table>
+            </div>
+        </div>
+
     </main>
     
 </body>
+
 </html>
