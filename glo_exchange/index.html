@@ -10,9 +10,50 @@
 
 </head>
 <body>
-    <main class="countainer ru-5 text-center ">
+    <!-- heading-->
+    <main class="countainer ру-5 text-center ">
     <div id="block-choice">
-        <img src="" alt="" class="">
+        <img src="./img/logo.png" alt="logo" class="d-bock mx-auto mb-4" width="72" height="72">
+        <h1>Shaverma</h1>
+        <p class="lead text-muted">Добро пожаловать на нашу фриланс биржу</p>
+        <p class="lead text-muted">Если вы заказчик то вы можете заказать проект</p>
+        <p class="lead text-muted">Если вы фрилансер то вы всегда найдете у нас проект по силам</p>
+        <p class="mt-5">
+            <a href="#" class="btn btn-primary my-3 px-4 ру-2" id="customer">Заказчик</a>
+            <a href="#" class="btn btn-secondaey my-3 px-4 ру-2" id="freelancer">Фрилансер</a>
+        </p>        
+    </div>
+    <!-- menu customer-->
+
+    <div id="block-customer">
+        <img src="./img/logo.png" alt="log" class="d-block mx-auto mb-4" width="72" height="72">
+        <h1>Shaverma</h1>
+        <div class="col">
+            <h4 class="mb-3">Оставте заявку</h4>
+            <form  id="form-customer">
+
+                <div class="mb-3">
+                    <label for="title">Заголовок (краткое описание задачи)</label>
+                    <input type="text" class="form-control" id="title" name="title" required placeholder="Заголовок">
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="firstName">Your name</label>
+                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="you@mail.com" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="phone">telephone number</label>
+                        <input type="text" class="form-control" id="phone" name="phone" placeholder="+375(29)1234567" required>
+                    </div>
+                    
+                </div>
+
+            </form>
+        </div>
     </div>
     </main>
     
