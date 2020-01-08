@@ -1,15 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
     'use strict';
-
     const     customer = document.getElementById('customer'),
     freelancer = document.getElementById('freelancer'),
-    blockCustomer = document.getElementById('blockCustomer'),
-    blockFreelancer = document.getElementById('block-customer'),
+    blockCustomer = document.getElementById('block-customer'),
+    blockFreelancer = document.getElementById('block-freelancer'),
     blockChoice = document.getElementById('block-choice'),
     btnExit = document.getElementById('btn-exit'),
+    formCustomer = document.getElementById('form-customer'),
     ordersTable = document.getElementById('orders'),
+    ordersTableFooter = document.getElementById('footTable'),
     modalOrder = document.getElementById('order_read'),
     modalOrderActive = document.getElementById('order_active');
+    headTable = document.getElementById('headTable');
 
     const orders =JSON.parse(localStorage.getItem('freeOrders')) || [];
 
@@ -17,10 +19,25 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('freeOrders', JSON.stringify(orders));
     };
 
-    const calcDeadline = (deadline) => {
-        const day = '10 дней';
-        return day;
-    }
+    const dayWord = (day, words) => {
+        return words[day%10==1 && day%100!=11 ? 0 : day%10>=2 && day%10<=4 && (day%100<10 || day%100>=20) ? 1 : 2];
+    };
+
+    const declOfNum = (number, titles) => number + ' ' + titles[(number % 100 > 4 && number % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(number % 10 < 5) ? number % 10 : 5]];
+
+    const calcDeadline = (data) => {
+        const deadline = new Date(data);
+        const toDay = Data.now();
+
+        const toDay = (deadline - toDay)/1000/60/60;
+        if (remaining / 24 > 2) {
+            return declOfNum(Math.floor(remaining / 24), ['день', 'дня', 'дней']);
+
+        }
+        return declOfNum(Math.floor(remaining), ['час', 'часа', 'часов']);
+    /* const days = Math.floor(Math.abs((Date.parse(deadline)-Date.now())/ (1000 * 3600 * 24)));
+        return days+' '+dayWord(days,['день','дня','дней']);*/
+    };
 
 
     const renderOrders = () => {
