@@ -119,7 +119,7 @@
                             <th class="head-sort" id="deadlinekSort">Deadline</th>
                         </tr>
                     </thead>
-                    <tfoot id="footTable">                        
+                    <tfoot id="footTable">
                     </tfoot>
                     <tbody id="orders"></tbody>
                 </table>
@@ -127,7 +127,105 @@
         </div>
 
     </main>
-    
+    <!--modal-->
+
+    <div id="order_read" class="order-modal modal bg-example-modal-lg">
+        <div class="modal-dialog modal-lg m-auto" role="document">
+
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h4 class="modal-title">Заголовок</h4>
+                    <button type="button" class="close text-white" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <b>Customer name</b><span class="firstName">Petr Mamytov</span>
+                        </div>
+                        <div class="col-6">
+                            <b>Customer email</b><a href="mailto:1@1" class="email">1@1</a>
+                        </div>
+                        <div class="col-12 bg-info text-white my-4">
+                            <h5>Detailed order description</h5>
+                            <p class="description">Hello WorldHello WorldHello WorldHello WorldHello WorldHello
+                                WorldHello WorldHello World</p>
+                        </div>
+
+                        <div
+                            class="col-12 bg-warning text-dark pt-2 d-flex justify-content-around align-content-center">
+                            <h5>Project deadline</h5>
+                            <p class="deadline">10.04.2020</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <div class="modal-currency">
+                        <span class="text">Payment</span>
+                        <span class="currency"><span class="currency_img"></span></span>
+                        <span class="count">5</span>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-info"><a href="#" class="phone text-white">Call</a>
+                        </button>
+                        <button type="button" class="btn btn-success get-order">Get order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="order-active" class="order-modal modal bg-example-modal-lg">
+        <div class="modal-dialog modal-lg m-auto" role="document">
+
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h4 class="modal-title">Head</h4>
+                    <button type="button" class="close text-white" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-4 text-center">
+                            <p>
+                                <b>Customer name</b>
+                            </p>
+                            <span class="firstName">Petr Mamonov</span>
+                        </div>
+                        <div class="col-4 text-center">
+                            <p>
+                                <b>Customer email</b>
+                            </p>
+                            <a href="mailto:1@1" class="email">1@1</a>
+                        </div>
+                        <div class="col-4 text-center modal-currency">
+                            <span class="text">Payment</span>
+                            <span class="currency"><span class="currency_img"></span></span>
+                            <span class="count">5</span>
+                        </div>
+                        <div class="col-12 bg-info text-white my-2 ру-2">
+                            <h5> Detailed order description</h5>
+                            <p class="description">Hello worldHello worldHello worldHello worldHello worldHello worldHello worldHello worldHello world</p>
+                        </div>
+
+                        <div class="col-12 bg-warning text-dark pt-2 d-flex justify-content-around align-content-center">
+                            <h5>Projec deadline</h5>
+                            <p class="deadline">10.04.2021</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-end">
+                    <button  type="button" id="capitulation" class="btn btn-danger">Capitulation</button>
+                    <button type="button" id="ready" class="btn btn-success">Success</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script/script.js"></script>
+
 </body>
 
 </html>
