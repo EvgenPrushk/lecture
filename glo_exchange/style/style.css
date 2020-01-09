@@ -37,6 +37,21 @@ main {
 .img__radio_bucks{
     background-image: url(../img/bucks.png);
 }
+
 .img__radio_shawarma{
     background-image: url(../img/shawarma.png);
+}
+
+.img__radio_doshirak {
+    background-image: url(../img/doshirak.png);
+}
+
+.shawarma {
+    background: url(../img/shawarma.png);
+    height: 40px;
+    width: 60px;
+}
+
+.doshirak {
+    background: url(../img/)
 }
