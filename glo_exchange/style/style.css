@@ -1,0 +1,42 @@
+main {
+    position: relative;
+}
+/*radio*/
+
+.currency{
+    position: relative;
+    height: 48px;
+    width: 48px;
+}
+
+.currency_radio {
+    position: absolute;
+    opacity: 0;
+}
+
+.currency_radio:checked + .img__radio {
+    filter: none;
+    border-color: tomato;
+}
+
+.img__radio {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: grayscale(100%);
+    border: 1px dashed transparent;
+    border-radius: 10px;
+}
+
+.img__radio_bucks{
+    background-image: url(../img/bucks.png);
+}
+.img__radio_shawarma{
+    background-image: url(../img/shawarma.png);
+}
