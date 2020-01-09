@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ordersTableFooter = document.getElementById('footTable'),
     modalOrder = document.getElementById('order_read'),
     modalOrderActive = document.getElementById('order_active');
-  headTable = document.getElementById('headTable');
+    headTable = document.getElementById('headTable');
 
   const orders = JSON.parse(localStorage.getItem('freeOrders')) || [];
 
